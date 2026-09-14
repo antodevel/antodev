@@ -1,0 +1,121 @@
+/* Permanent brand theme: neutral dark navy, white typography, Telegram blue. */
+:root {
+  color-scheme: dark;
+  --background: #0b1118;
+  --foreground: #f1f6fa;
+  --card: #111b25;
+  --card-foreground: #f1f6fa;
+  --popover: #131e2a;
+  --popover-foreground: #f1f6fa;
+  --primary: #229ed9;
+  --primary-foreground: #fff;
+  --secondary: #172532;
+  --secondary-foreground: #eaf2f8;
+  --muted: #16222e;
+  --muted-foreground: #a0b1c0;
+  --accent: #183248;
+  --accent-foreground: #eaf6ff;
+  --border: #273746;
+  --input: #314555;
+  --ring: #229ed9;
+}
+body { background: var(--background); color: var(--foreground); }
+::selection { background: #229ed94d; color: #fff; }
+.navbar { background: #0b1118de; border-color: #ffffff0c; }
+.logo { color: #f1f6fa; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: #53baf0; }
+.button, .telegram-mark, .bot-avatar, .chat-launcher { color: #fff; }
+.button-outline { background: #14212c; color: #f1f6fa; border-color: #304454; }
+.button-outline:hover { background: #1b3041; border-color: #407497; }
+.hero-art { background: var(--background); }
+.portrait-halo { background: radial-gradient(ellipse at 48% 57%, #163e59 0%, #102434 36%, transparent 69%); }
+.hero-orbit { border-color: #3b8cbe23; }
+.hero-orbit:after { background: #229ed9; border-color: #122c40; }
+.hero-portrait {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  /* Fill the complete art height; crop the lower 8% at the block edge. */
+  mix-blend-mode: normal;
+  opacity: 1;
+  clip-path: none;
+  mask-image: none;
+}
+.hero-portrait .portrait-image {
+  display: block;
+  position: static;
+  height: calc(100% / .92);
+  width: auto;
+  max-width: none;
+  flex-shrink: 0;
+  object-fit: contain;
+  clip-path: none;
+  transform: none;
+  filter: none;
+  mask-image: none;
+}
+@media(prefers-reduced-motion:reduce) {
+  .hero-portrait { transform: none!important; }
+}
+.code-badge, .hero-message { background: #152330e8; border-color: #46627c55; box-shadow: 0 18px 40px #0004; }
+.hero-message b { color: #e6eff5; }
+.person-label { color: #cadce8; bottom: 12px; }
+.mini-avatar, .contact-icon, .contact-success>span { background: #18354a; color: #48b5ee; }
+.service-card { background: linear-gradient(135deg, #131f2b, #101923); border-color: #243442; }
+.tags span { color: #a9c0d1; border-color: #2c4050; }
+.stack-tags span { background: #131f29; }
+.portfolio-section { background: #0e1720; border-color: #21303b; }
+.project-card { background: #111c26; border-color: #283b4b; }
+.website-project-visual { background: radial-gradient(ellipse at 50% 0%, #253a48, #14212c); }
+.telegram-project-visual { background: radial-gradient(ellipse at 60% 50%, #19344a, #101e2b); }
+.browser-preview { box-shadow: 0 20px 40px #0005; }
+.browser-toolbar, .telegram-header, .telegram-composer { background: #1b2936; }
+.browser-toolbar>span { background: #101c26; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.browser-dots i { background: #546d7f; }
+.telegram-preview { background: #101e29; border-color: #304656; box-shadow: 0 20px 45px #0004; }
+.telegram-header b { color: #e4eef6; }
+.chat-date { background: #213948; color: #b0c6d5; }
+.bubble { background: #203442; color: #e3edf4; }
+.bubble.outgoing { background: #204967; }
+.bubble small { color: #9abed6; }
+.bot-action { background: #203747; color: #68c3f3; }
+.bot-action:hover { background: #294c64; }
+.manager-preview { background: #192c3bec; border-color: #365266; box-shadow: 0 20px 40px #0003; }
+.manager-row { border-color: #2b4152; }
+.status-chip { background: #1c4661; color: #7acefc; }
+.responsive-label { background: #1b2b39; color: #b6cbd9; box-shadow: 0 8px 25px #0003; }
+.preview-open { background: #1a3041; color: #ecf7ff; }
+.step-line>span { background: #152b3b; border-color: #2b495f; color: #53baf0; }
+.step-line i { background: #2a3b48; }
+.process-grid li:last-child i { background: linear-gradient(90deg,#2a3b48,transparent); }
+.cta-panel { background: linear-gradient(110deg, #111f2b, #102638); border-color: #28475d; }
+.cta-glow { background: radial-gradient(#174d7270, transparent); border-color: #32638930; box-shadow: 0 0 0 65px #2b678b0c, 0 0 0 130px #2b678b08; }
+.contact-dialog { background: #131e2a; border-color: #344a5b!important; box-shadow: 0 18px 75px #0008!important; }
+body [data-slot="dialog-overlay"] { background: #02080f80; }
+.contact-close:hover { background: #233746; }
+.contact-form label { color: #bfceda; }
+.contact-form input, .contact-form textarea { background: #0d1720; border-color: #324757; color: #edf5fa; }
+.contact-direct { color: #53baf0; border-color: #2c4050; }
+.form-error { color: #ff929e; }
+.portfolio-more { display: flex; justify-content: center; margin-top: 48px; }
+.project-list { display: grid; gap: 32px; }
+.portfolio-intro { padding-block: 48px 60px; }
+.back-home { display: inline-block; color: #9fb4c4; font-size: 14px; margin-bottom: 54px; }
+.back-home:hover { color: #53baf0; }
+.portfolio-intro h1 { margin-block: 20px 25px; }
+.portfolio-intro>p { color: #a0b1c0; font-size: 18px; line-height: 1.7; }
+.portfolio-full { padding-top: 30px; margin-bottom: 64px; }
+.portfolio-category h2 { font-size: 24px; letter-spacing: -.7px; margin: 0; }
+@media(max-width:760px) {
+  .nav-links { background: #111b25; border-color: #2a3a47; }
+  .portfolio-intro { padding-block: 30px 35px; }
+  .back-home { margin-bottom: 40px; }
+  .portfolio-intro h1 { font-size: clamp(42px,10vw,60px); }
+  .portfolio-intro>p { font-size: 16px; }
+  .portfolio-category h2 { font-size: 22px; }
+  .portfolio-full { padding-top: 12px; margin-bottom: 35px; }
+  .portfolio-more { margin-top: 32px; }
+}
