@@ -21,6 +21,13 @@ export const projects: Project[] = [
     url: "https://restaurant-demo-xi-seven.vercel.app/",
   },
   {
+    id: "highwash", featured: false, previewImage: "/highwash-preview.png", previewAlt: "HIGHWASH — клининг и высотные работы", kind: "website", title: "HIGHWASH — клининг и высотные работы", subtitle: "HIGHWASH / САЙТ УСЛУГ",
+    description: "Сайт клининга и промышленного альпинизма: услуги, информация о компании и обращение для расчёта стоимости.",
+    technologies: [],
+    features: ["Каталог услуг", "Раздел о компании", "Ответы на вопросы", "Контакты и расчёт стоимости"],
+    url: "https://antodev-highwash.vercel.app/",
+  },
+  {
     id: "questionnaire", featured: true, kind: "telegram", title: "Бот для приёма заявок", subtitle: "TELEGRAM / АВТОМАТИЗАЦИЯ",
     description: "Собирает информацию шаг за шагом и передаёт готовую заявку менеджеру. Всё — в привычном чате.",
     technologies: ["Python", "aiogram 3", "FSM", "SQLite"],

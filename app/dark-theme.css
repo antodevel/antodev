@@ -101,6 +101,8 @@ body [data-slot="dialog-overlay"] { background: #02080f80; }
 .contact-direct { color: #53baf0; border-color: #2c4050; }
 .form-error { color: #ff929e; }
 .portfolio-more { display: flex; justify-content: center; margin-top: 48px; }
+.portfolio-category-link { display: inline-flex; align-items: center; gap: 8px; color: #53baf0; font-size: 14px; white-space: nowrap; }
+.portfolio-category-link:hover { color: #a6ddfa; }
 .project-list { display: grid; gap: 32px; }
 .portfolio-intro { padding-block: 48px 60px; }
 .back-home { display: inline-block; color: #9fb4c4; font-size: 14px; margin-bottom: 54px; }

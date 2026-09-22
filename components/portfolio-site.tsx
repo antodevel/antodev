@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+
 import { Portrait } from "@/components/portrait";
 import { ArrowUpRight, ArrowDown, Menu, X, Send, Code2, Check, Plus } from "lucide-react";
 import { useEffect, useState, type ReactNode, type MouseEvent } from "react";
@@ -57,14 +57,14 @@ export function Portfolio({ full = false }: { full?: boolean }) {
     {(["website","telegram"] as const).map(kind=>{
       const group=visibleProjects.filter(p=>p.kind===kind);
       if(!group.length)return null;
-      return <div className="portfolio-group" key={kind}><Reveal><div className="portfolio-category">{full?<h2>{kind==="website"?"Сайты":"Telegram-боты"}</h2>:<h3>{kind==="website"?"Сайты":"Telegram-боты"}</h3>}<span>{String(group.length).padStart(2,"0")}</span><div/></div></Reveal><div className="project-list">{group.map(p=><Reveal key={p.id}>{kind==="website"?<WebsiteProjectCard project={p}/>:<TelegramProjectCard project={p}/>}</Reveal>)}</div></div>;
+      return <div className="portfolio-group" id={kind==="website"?"websites":"telegram-bots"} key={kind}><Reveal><div className="portfolio-category">{full?<h2>{kind==="website"?"Сайты":"Telegram-боты"}</h2>:<h3>{kind==="website"?"Сайты":"Telegram-боты"}</h3>}<span>{String(projects.filter(p=>p.kind===kind).length).padStart(2,"0")}</span><div/>{!full && kind==="website" && <a className="portfolio-category-link" href="/portfolio#websites">Все сайты <ArrowUpRight size={16}/></a>}</div></Reveal><div className="project-list">{group.map(p=><Reveal key={p.id}>{kind==="website"?<WebsiteProjectCard project={p}/>:<TelegramProjectCard project={p}/>}</Reveal>)}</div></div>;
     })}
     {!full && <div className="portfolio-more"><a className="button button-outline" href="/portfolio">Все проекты <ArrowUpRight size={18}/></a></div>}
   </div></section>;
 }
 export function PortfolioPage() {
   const [contactOpen,setContactOpen]=useState(false);
-  return <MotionConfig reducedMotion="user"><a className="skip-link" href="#main">Перейти к содержимому</a><div id="home"/><Navbar portfolioPage onContact={()=>setContactOpen(true)}/><main id="main"><section className="container portfolio-intro"><Link href="/" className="back-home">← На главную</Link><div className="eyebrow">ANTODEV / ПРОЕКТЫ</div><h1>Портфолио<span>.</span></h1><p>Сайты и Telegram-боты.<br/>От интерфейса до логики внутри.</p></section><Portfolio full/><ContactCTA onContact={()=>setContactOpen(true)}/></main><Footer/><ChatWidget open={contactOpen} onOpenChange={setContactOpen}/></MotionConfig>;
+  return <MotionConfig reducedMotion="user"><a className="skip-link" href="#main">Перейти к содержимому</a><div id="home"/><Navbar portfolioPage onContact={()=>setContactOpen(true)}/><main id="main"><section className="container portfolio-intro"><a href="/#portfolio" className="back-home">← На главную</a><div className="eyebrow">ANTODEV / ПРОЕКТЫ</div><h1>Портфолио<span>.</span></h1><p>Сайты и Telegram-боты.<br/>От интерфейса до логики внутри.</p></section><Portfolio full/><ContactCTA onContact={()=>setContactOpen(true)}/></main><Footer/><ChatWidget open={contactOpen} onOpenChange={setContactOpen}/></MotionConfig>;
 }
 export function WorkProcess() {
   const steps=[["Обсуждаем задачу","Что нужно сделать и как это должно работать."],["Предлагаю решение","Определяем подход, сроки и объём работы."],["Разрабатываю","Показываю промежуточный результат."],["Тестируем и запускаем","Проверяем сценарии и выпускаем проект."]];
