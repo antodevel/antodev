@@ -14,7 +14,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "ember", featured: true, previewImage: "/restaurant-preview.png", previewAlt: "Ресторанный сайт EMBER", kind: "website", title: "Ресторанный сайт", subtitle: "EMBER / ДЕМОНСТРАЦИОННЫЙ ПРОЕКТ",
+    id: "cosmos", featured: true, previewImage: "/cosmos-preview.png", previewAlt: "КОСМОС — сайт часов с орбитальной композицией и анимациями", kind: "website", title: "КОСМОС — сайт часов", subtitle: "КОСМОС / ИНТЕРАКТИВНАЯ ПРЕЗЕНТАЦИЯ",
+    description: "Сайт часов с анимациями при прокрутке: движение объектов, плавное появление секций и прорисовка орбитальных линий.",
+    technologies: ["Next.js", "React", "TypeScript", "GSAP", "ScrollTrigger"],
+    features: ["Анимации, связанные с прокруткой", "Анимированное появление первого экрана", "Прорисовка SVG-линий", "Презентация коллекции часов", "Адаптация анимаций для мобильных устройств", "Поддержка уменьшенного движения"],
+    url: "https://antodev-watches.vercel.app/",
+  },
+  {
+    id: "ember", featured: false, previewImage: "/restaurant-preview.png", previewAlt: "Ресторанный сайт EMBER", kind: "website", title: "Ресторанный сайт", subtitle: "EMBER / ДЕМОНСТРАЦИОННЫЙ ПРОЕКТ",
     description: "Сайт ресторана с интерактивным первым экраном, анимациями, меню и формой бронирования.",
     technologies: ["React", "TypeScript", "Адаптивная вёрстка"],
     features: ["Интерактивный hero", "Меню с категориями", "Бронирование"],
