@@ -3,7 +3,7 @@
 import { ArrowLeft, CheckCheck, MoreHorizontal, Paperclip, Send, RotateCcw } from "lucide-react";
 import { useState } from "react";
 
-export function WebsitePreview({ compact = false, image = "/restaurant-preview.png", alt = "Сайт EMBER: меню ресторана и интерактивный первый экран с блюдами", url = "https://restaurant-demo-xi-seven.vercel.app/" }: { compact?: boolean; image?: string; alt?: string; url?: string }) {
+export function WebsitePreview({ compact = false, image = "/restaurant-preview.png", alt = "Сайт EMBER: меню ресторана и интерактивный первый экран с блюдами", url = "http://antodev-restaurant.vercel.app" }: { compact?: boolean; image?: string; alt?: string; url?: string }) {
   return <div className={compact ? "browser-preview compact" : "browser-preview"}>
     <div className="browser-toolbar"><div className="browser-dots"><i/><i/><i/></div><span>{new URL(url).hostname}</span><MoreHorizontal size={16}/></div>
     <img src={image} alt={alt} width={1265} height={712} loading="lazy"/>

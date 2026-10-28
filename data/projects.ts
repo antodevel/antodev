@@ -25,7 +25,7 @@ export const projects: Project[] = [
     description: "Сайт ресторана с интерактивным первым экраном, анимациями, меню и формой бронирования.",
     technologies: ["React", "TypeScript", "Адаптивная вёрстка"],
     features: ["Интерактивный hero", "Меню с категориями", "Бронирование"],
-    url: "https://restaurant-demo-xi-seven.vercel.app/",
+    url: "http://antodev-restaurant.vercel.app",
   },
   {
     id: "highwash", featured: false, previewImage: "/highwash-preview.png", previewAlt: "HIGHWASH — клининг и высотные работы", kind: "website", title: "HIGHWASH — клининг и высотные работы", subtitle: "HIGHWASH / САЙТ УСЛУГ",
