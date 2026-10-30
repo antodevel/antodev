@@ -65,6 +65,12 @@ body { background: var(--background); color: var(--foreground); }
 .person-label { color: #cadce8; bottom: 12px; }
 .mini-avatar, .contact-icon, .contact-success>span { background: #18354a; color: #48b5ee; }
 .service-card { background: linear-gradient(135deg, #131f2b, #101923); border-color: #243442; }
+.service-card { position: relative; isolation: isolate; }
+.service-card-link::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+.service-card:has(.service-card-link:hover), .service-card:has(.service-card-link:focus-visible) { border-color: #229ed9; }
+.service-card:has(.service-card-link:focus-visible) { outline: 2px solid #229ed9; outline-offset: 4px; }
+/* Keep the entire demo chat above the card link, including its scroll area. */
+.service-card .telegram-service { z-index: 2; }
 .tags span { color: #a9c0d1; border-color: #2c4050; }
 .stack-tags span { background: #131f29; }
 .portfolio-section { background: #0e1720; border-color: #21303b; }
